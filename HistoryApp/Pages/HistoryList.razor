@@ -1,0 +1,21 @@
+@page "/HostoryList"
+
+<h3> History List</h3>
+
+<ul>
+    @foreach(var History in History)
+    {
+        <li>@History</li>
+    }
+</ul>
+@code{
+    private List<string> History { get; set; } = new List<string>
+    {
+        "African-American History",
+        "Cold war",
+        "World War II",
+        "Middle Age",
+        "Crusades",
+
+    };
+}

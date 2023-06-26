@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace HistoryApp.Shared
+namespace HistoryApp.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,8 @@ using HistoryApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/HostoryList")]
+    public partial class HistoryList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,16 +91,17 @@ using HistoryApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
-
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+#line 11 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
+      
+    private List<string> History { get; set; } = new List<string>
     {
-        collapseNavMenu = !collapseNavMenu;
-    }
+        "African-American History",
+        "Cold war",
+        "World War II",
+        "Middle Age",
+        "Crusades",
+
+    };
 
 #line default
 #line hidden

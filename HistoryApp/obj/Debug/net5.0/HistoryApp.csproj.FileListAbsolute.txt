@@ -56,3 +56,5 @@ C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\obj\Debug\net5.0
 C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\obj\Debug\net5.0\HistoryApp.pdb
 C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\obj\Debug\net5.0\HistoryApp.genruntimeconfig.cache
 C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\obj\Debug\net5.0\HistoryApp.csproj.CopyComplete
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\obj\Debug\net5.0\RazorDeclaration\Pages\HistoryList.razor.g.cs
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\obj\Debug\net5.0\Razor\Pages\HistoryList.razor.g.cs

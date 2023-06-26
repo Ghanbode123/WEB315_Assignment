@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 686080201,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Counter",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": -2126255487,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Counter",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HistoryApp.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -2097038878,
         "Kind": "Components.Component",
         "Name": "HistoryApp.Pages.FetchData",
@@ -107,6 +74,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "HistoryApp.Pages.Index",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 686080201,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.Counter",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": -2126255487,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.Counter",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryApp.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1081933803,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.HistoryList",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.HistoryList"
+        }
+      },
+      {
+        "HashCode": 92049467,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.HistoryList",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryApp.Pages.HistoryList"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.HistoryList",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -15941,6 +15974,11 @@
       "FilePath": "c:\\Users\\W0835765\\Documents\\GitHub\\WEB315_Assignment\\HistoryApp\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\W0835765\\Documents\\GitHub\\WEB315_Assignment\\HistoryApp\\Pages\\HistoryList.razor",
+      "TargetPath": "Pages\\HistoryList.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\W0835765\\Documents\\GitHub\\WEB315_Assignment\\HistoryApp\\Pages\\_Host.cshtml",
