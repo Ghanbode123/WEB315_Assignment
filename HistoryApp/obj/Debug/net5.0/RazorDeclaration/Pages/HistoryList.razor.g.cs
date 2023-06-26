@@ -82,7 +82,7 @@ using HistoryApp.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/HostoryList")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/HistoryList")]
     public partial class HistoryList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -91,17 +91,22 @@ using HistoryApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
-      
-    private List<string> History { get; set; } = new List<string>
-    {
-        "African-American History",
-        "Cold war",
-        "World War II",
-        "Middle Age",
-        "Crusades",
+#line 17 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
+       
+    private List<string> History { get; set; } = new List<string>();
 
-    };
+    private void PopulateArray()
+    {
+        History.Clear();
+        History.AddRange(new List<string>
+        {
+            "African-American History",
+            "Cold War",
+            "World War II",
+            "Middle Ages",
+            "Crusades"
+        });
+    }
 
 #line default
 #line hidden

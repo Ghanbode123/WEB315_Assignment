@@ -1,21 +1,32 @@
-@page "/HostoryList"
+@page "/HistoryList"
 
-<h3> History List</h3>
+<h3>History List</h3>
 
-<ul>
-    @foreach(var History in History)
+<button class="btn btn-primary" @onclick="PopulateArray">Populate Array</button>
+
+@if (History.Count > 0)
+{
+    <ul>
+        @foreach (var item in History)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+@code {
+    private List<string> History { get; set; } = new List<string>();
+
+    private void PopulateArray()
     {
-        <li>@History</li>
+        History.Clear();
+        History.AddRange(new List<string>
+        {
+            "African-American History",
+            "Cold War",
+            "World War II",
+            "Middle Ages",
+            "Crusades"
+        });
     }
-</ul>
-@code{
-    private List<string> History { get; set; } = new List<string>
-    {
-        "African-American History",
-        "Cold war",
-        "World War II",
-        "Middle Age",
-        "Crusades",
-
-    };
 }
