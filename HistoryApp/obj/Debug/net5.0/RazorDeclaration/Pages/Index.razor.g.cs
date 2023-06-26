@@ -91,10 +91,21 @@ using HistoryApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 7 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
+#line 9 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
       
-string MyName="Ghanbode ebierede";
+string MyName="Ghanbode Ebierede";
+private int currentCount = 0;
 
+private void IncrementCount()
+{
+    currentCount += 2;
+
+    if (currentCount > 15)
+ {
+   currentCount = 0;
+ }
+
+}
 
 #line default
 #line hidden

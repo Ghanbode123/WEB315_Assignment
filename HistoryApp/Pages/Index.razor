@@ -1,10 +1,23 @@
 @page "/"
-<h1> my name is @MyName</h1>
+<h1> My Name is @MyName</h1>
 <p> The name of my theme is HistoryApp</p>
 @DateTime.Now
 
 
-@code{
-string MyName="Ghanbode ebierede";
 
+
+@code{
+string MyName="Ghanbode Ebierede";
+private int currentCount = 0;
+
+private void IncrementCount()
+{
+    currentCount += 2;
+
+    if (currentCount > 15)
+ {
+   currentCount = 0;
+ }
+
+}
 }
