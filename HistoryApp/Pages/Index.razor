@@ -1,23 +1,40 @@
 @page "/"
-<h1> My Name is @MyName</h1>
-<p> The name of my theme is HistoryApp</p>
-@DateTime.Now
+@inject NavigationManager NavigationManager
+
+@using System
+@using System.Timers
+
+<h3>Welcome to @ThemeName</h3>
+<p>Developed by: @YourName</p>
+<p>Current Date and Time: @CurrentDateTime</p>
 
 
 
+@code {
+    private string ThemeName { get; } = "HistoryApp";
+    private string YourName { get; } = "GHANBODE EBIEREDE";
+    private DateTime CurrentDateTime { get; set; } = DateTime.Now;
 
-@code{
-string MyName="Ghanbode Ebierede";
-private int currentCount = 0;
+    private Timer timer;
 
-private void IncrementCount()
-{
-    currentCount += 2;
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
 
-    if (currentCount > 15)
- {
-   currentCount = 0;
- }
+        timer = new Timer(1000); // Update every 1 second (1000 milliseconds)
+        timer.Elapsed += TimerElapsed;
+        timer.Start();
+    }
 
-}
+    private void TimerElapsed(object sender, ElapsedEventArgs e)
+    {
+        CurrentDateTime = DateTime.Now;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        timer.Stop();
+        timer.Dispose();
+    }
 }

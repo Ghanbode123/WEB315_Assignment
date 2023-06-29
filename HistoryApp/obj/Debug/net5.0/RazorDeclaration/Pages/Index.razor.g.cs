@@ -7,7 +7,6 @@
 namespace HistoryApp.Pages
 {
     #line hidden
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -82,6 +81,20 @@ using HistoryApp.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
+using System;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
+using System.Timers;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -91,25 +104,39 @@ using HistoryApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
-      
-string MyName="Ghanbode Ebierede";
-private int currentCount = 0;
+#line 13 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
+       
+    private string ThemeName { get; } = "HistoryApp";
+    private string YourName { get; } = "GHANBODE EBIEREDE";
+    private DateTime CurrentDateTime { get; set; } = DateTime.Now;
 
-private void IncrementCount()
-{
-    currentCount += 2;
+    private Timer timer;
 
-    if (currentCount > 15)
- {
-   currentCount = 0;
- }
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
 
-}
+        timer = new Timer(1000); // Update every 1 second (1000 milliseconds)
+        timer.Elapsed += TimerElapsed;
+        timer.Start();
+    }
+
+    private void TimerElapsed(object sender, ElapsedEventArgs e)
+    {
+        CurrentDateTime = DateTime.Now;
+        InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        timer.Stop();
+        timer.Dispose();
+    }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
     }
 }
 #pragma warning restore 1591

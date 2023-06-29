@@ -12,72 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 686080201,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Counter",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Counter"
-        }
-      },
-      {
-        "HashCode": -2126255487,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Counter",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HistoryApp.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Counter",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1045204551,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Index",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 125254752,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Index",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HistoryApp.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Index",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -2097038878,
         "Kind": "Components.Component",
         "Name": "HistoryApp.Pages.FetchData",
@@ -140,6 +74,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "HistoryApp.Pages.HistoryList",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 686080201,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.Counter",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.Counter"
+        }
+      },
+      {
+        "HashCode": -2126255487,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.Counter",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryApp.Pages.Counter"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.Counter",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1045204551,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.Index",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.Index"
+        }
+      },
+      {
+        "HashCode": 125254752,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Pages.Index",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryApp.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
