@@ -13,6 +13,10 @@
         }
     </ul>
 }
+else
+{
+    <p>No history items available.</p>
+}
 
 @code {
     private List<string> History { get; set; } = new List<string>();
@@ -30,3 +34,4 @@
         });
     }
 }
+

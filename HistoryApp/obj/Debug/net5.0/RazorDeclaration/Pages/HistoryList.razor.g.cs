@@ -91,7 +91,7 @@ using HistoryApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
+#line 21 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
        
     private List<string> History { get; set; } = new List<string>();
 

@@ -87,27 +87,23 @@ using HistoryApp.Shared;
         {
             __builder.OpenElement(0, "h1");
             __builder.AddContent(1, " My Name is ");
-            __builder.AddContent(2, 
 #nullable restore
 #line 2 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
-                 MyName
+__builder.AddContent(2, MyName);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddMarkupContent(3, "\r\n");
             __builder.AddMarkupContent(4, "<p> The name of my theme is HistoryApp</p>\r\n");
-            __builder.AddContent(5, 
 #nullable restore
 #line 4 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\Index.razor"
- DateTime.Now
+__builder.AddContent(5, DateTime.Now);
 
 #line default
 #line hidden
 #nullable disable
-            );
         }
         #pragma warning restore 1998
 #nullable restore

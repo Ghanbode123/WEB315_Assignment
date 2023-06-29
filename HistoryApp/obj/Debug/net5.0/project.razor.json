@@ -12,68 +12,35 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -2097038878,
+        "HashCode": 1081933803,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.FetchData",
+        "Name": "HistoryApp.Pages.HistoryList",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "FetchData"
+            "TagName": "HistoryList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.FetchData"
+          "Common.TypeName": "HistoryApp.Pages.HistoryList"
         }
       },
       {
-        "HashCode": -747139812,
+        "HashCode": 92049467,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.FetchData",
+        "Name": "HistoryApp.Pages.HistoryList",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HistoryApp.Pages.FetchData"
+            "TagName": "HistoryApp.Pages.HistoryList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.FetchData",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": 1045204551,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Index",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Index"
-        }
-      },
-      {
-        "HashCode": 125254752,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.Index",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HistoryApp.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.Index",
+          "Common.TypeName": "HistoryApp.Pages.HistoryList",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -111,68 +78,101 @@
         }
       },
       {
-        "HashCode": 1081933803,
+        "HashCode": 1045204551,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.HistoryList",
+        "Name": "HistoryApp.Pages.Index",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HistoryList"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.HistoryList"
+          "Common.TypeName": "HistoryApp.Pages.Index"
         }
       },
       {
-        "HashCode": 92049467,
+        "HashCode": 125254752,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.HistoryList",
+        "Name": "HistoryApp.Pages.Index",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HistoryApp.Pages.HistoryList"
+            "TagName": "HistoryApp.Pages.Index"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.HistoryList",
+          "Common.TypeName": "HistoryApp.Pages.Index",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
       {
-        "HashCode": -883982824,
+        "HashCode": -2097038878,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.App",
+        "Name": "HistoryApp.Pages.FetchData",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "App"
+            "TagName": "FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.App"
+          "Common.TypeName": "HistoryApp.Pages.FetchData"
         }
       },
       {
-        "HashCode": 2034553738,
+        "HashCode": -747139812,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.App",
+        "Name": "HistoryApp.Pages.FetchData",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HistoryApp.App"
+            "TagName": "HistoryApp.Pages.FetchData"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.App",
+          "Common.TypeName": "HistoryApp.Pages.FetchData",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1174616967,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Shared.NavMenu",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1450575894,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Shared.NavMenu",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryApp.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -326,35 +326,35 @@
         }
       },
       {
-        "HashCode": -1174616967,
+        "HashCode": -883982824,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Shared.NavMenu",
+        "Name": "HistoryApp.App",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Shared.NavMenu"
+          "Common.TypeName": "HistoryApp.App"
         }
       },
       {
-        "HashCode": -1450575894,
+        "HashCode": 2034553738,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Shared.NavMenu",
+        "Name": "HistoryApp.App",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HistoryApp.Shared.NavMenu"
+            "TagName": "HistoryApp.App"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Shared.NavMenu",
+          "Common.TypeName": "HistoryApp.App",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
