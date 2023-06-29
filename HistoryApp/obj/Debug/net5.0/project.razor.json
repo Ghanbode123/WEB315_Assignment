@@ -12,39 +12,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": 1081933803,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.HistoryList",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HistoryList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.HistoryList"
-        }
-      },
-      {
-        "HashCode": 92049467,
-        "Kind": "Components.Component",
-        "Name": "HistoryApp.Pages.HistoryList",
-        "AssemblyName": "HistoryApp",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "HistoryApp.Pages.HistoryList"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Pages.HistoryList",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 686080201,
         "Kind": "Components.Component",
         "Name": "HistoryApp.Pages.Counter",
@@ -144,35 +111,35 @@
         }
       },
       {
-        "HashCode": -1174616967,
+        "HashCode": 1081933803,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Shared.NavMenu",
+        "Name": "HistoryApp.Pages.HistoryList",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "HistoryList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Shared.NavMenu"
+          "Common.TypeName": "HistoryApp.Pages.HistoryList"
         }
       },
       {
-        "HashCode": -1450575894,
+        "HashCode": 92049467,
         "Kind": "Components.Component",
-        "Name": "HistoryApp.Shared.NavMenu",
+        "Name": "HistoryApp.Pages.HistoryList",
         "AssemblyName": "HistoryApp",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "HistoryApp.Shared.NavMenu"
+            "TagName": "HistoryApp.Pages.HistoryList"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "HistoryApp.Shared.NavMenu",
+          "Common.TypeName": "HistoryApp.Pages.HistoryList",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -322,6 +289,39 @@
           "Runtime.Name": "Components.None",
           "Common.TypeName": "HistoryApp.Shared.MainLayout.Body",
           "Components.IsSpecialKind": "Components.ChildContent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1174616967,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Shared.NavMenu",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Shared.NavMenu"
+        }
+      },
+      {
+        "HashCode": -1450575894,
+        "Kind": "Components.Component",
+        "Name": "HistoryApp.Shared.NavMenu",
+        "AssemblyName": "HistoryApp",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "HistoryApp.Shared.NavMenu"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "HistoryApp.Shared.NavMenu",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

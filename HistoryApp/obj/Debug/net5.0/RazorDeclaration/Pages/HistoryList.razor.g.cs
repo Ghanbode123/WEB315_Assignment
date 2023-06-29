@@ -91,9 +91,11 @@ using HistoryApp.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 21 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
+#line 23 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\HistoryApp\Pages\HistoryList.razor"
        
     private List<string> History { get; set; } = new List<string>();
+    private List<string> DisplayedHistory { get; set; } = new List<string>();
+    private int displayLimit = 5;
 
     private void PopulateArray()
     {
@@ -106,6 +108,28 @@ using HistoryApp.Shared;
             "Middle Ages",
             "Crusades"
         });
+
+        UpdateDisplayedHistory();
+    }
+
+    private void HandleInput(ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value.ToString(), out int limit))
+        {
+            displayLimit = limit;
+            UpdateDisplayedHistory();
+        }
+    }
+
+    private void UpdateDisplayedHistory()
+    {
+        DisplayedHistory = History.Take(displayLimit).ToList();
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        UpdateDisplayedHistory();
     }
 
 #line default
