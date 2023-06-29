@@ -2,11 +2,11 @@
 
 <h3>History List</h3>
 
-<input type="number" min="0" max="5" @bind="@displayLimit" @oninput="HandleInput" />
+<input type="number" min="0" max="5" @bind="@displayLimit" @oninput="() => HandleInput(displayLimit)" />
 
 <button class="btn btn-primary" @onclick="PopulateArray">Populate Array</button>
 
-@if (History.Count > 0)
+@if (DisplayedHistory.Count > 0)
 {
     <ul>
         @foreach (var item in DisplayedHistory)
@@ -40,9 +40,9 @@ else
         UpdateDisplayedHistory();
     }
 
-    private void HandleInput(ChangeEventArgs e)
+    private void HandleInput(int limit)
     {
-        if (int.TryParse(e.Value.ToString(), out int limit))
+        if (limit >= 0 && limit <= 5)
         {
             displayLimit = limit;
             UpdateDisplayedHistory();

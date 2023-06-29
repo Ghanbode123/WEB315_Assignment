@@ -112,9 +112,9 @@ using HistoryApp.Shared;
         UpdateDisplayedHistory();
     }
 
-    private void HandleInput(ChangeEventArgs e)
+    private void HandleInput(int limit)
     {
-        if (int.TryParse(e.Value.ToString(), out int limit))
+        if (limit >= 0 && limit <= 5)
         {
             displayLimit = limit;
             UpdateDisplayedHistory();
