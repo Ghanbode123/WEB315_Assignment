@@ -1,0 +1,12 @@
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\bin\Debug\net6.0\GhanbodeEbieredeChat.Shared.deps.json
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\bin\Debug\net6.0\GhanbodeEbieredeChat.Shared.dll
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\bin\Debug\net6.0\GhanbodeEbieredeChat.Shared.pdb
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.csproj.AssemblyReference.cache
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.AssemblyInfoInputs.cache
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.AssemblyInfo.cs
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.csproj.CoreCompileInputs.cache
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.dll
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\refint\GhanbodeEbieredeChat.Shared.dll
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\GhanbodeEbieredeChat.Shared.pdb
+C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeChat\Shared\obj\Debug\net6.0\ref\GhanbodeEbieredeChat.Shared.dll
