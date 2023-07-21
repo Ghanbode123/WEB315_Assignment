@@ -1,0 +1,37 @@
+@code {
+   private class TaskItem
+{
+    public string Description { get; set; }
+    public bool IsComplete { get; set; }
+    public DateTime DueDate { get; set; }
+}
+
+    private List<TaskItem> tasks = new List<TaskItem>();
+    private string newTaskDescription;
+}
+
+@code {
+    // ... previous code ...
+
+    private DateTime newTaskDueDate = DateTime.Today;
+
+    private void AddTask()
+    {
+        if (!string.IsNullOrWhiteSpace(newTaskDescription))
+        {
+            tasks.Add(new TaskItem
+            {
+                Description = newTaskDescription,
+                IsComplete = false,
+                DueDate = newTaskDueDate
+            });
+            newTaskDescription = string.Empty;
+            newTaskDueDate = DateTime.Today;
+        }
+    }
+
+    private void DeleteTask(TaskItem taskToDelete)
+    {
+        tasks.Remove(taskToDelete);
+    }
+}

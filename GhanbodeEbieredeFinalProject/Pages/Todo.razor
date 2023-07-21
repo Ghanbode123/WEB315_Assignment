@@ -1,0 +1,118 @@
+@page "/Todo"
+
+<h3>Number of Tasks: @GetIncompleteTaskCount()</h3>
+<input placeholder="Task title" @bind="newTaskTitle" />
+<input placeholder="Task description" @bind="newTaskDescription" />
+<input type="date" @bind="newTaskDueDate" />
+<button @onclick="AddTask">Add Task</button>
+<br>
+<ul>
+    @foreach (var task in tasks)
+    {
+        <li>
+            <input type="checkbox" @onclick="(e) => UpdateTaskStatus(task)" @bind="task.IsDone" />
+            <span>@task.Title</span> - <span>@task.Description</span> (@task.DueDate.ToShortDateString())
+            <button @onclick="() => DeleteTask(task)">Delete</button>
+            <button @onclick="() => AddSubTask(task)">Add SubTask</button>
+
+            @if (task.SubTasks != null && task.SubTasks.Count > 0)
+            {
+                <ul>
+                    @foreach (var subTask in task.SubTasks)
+                    {
+                        <li>
+                            <input type="checkbox" @onclick="(e) => UpdateSubTaskStatus(task, subTask)" @bind="subTask.IsDone" />
+                            <span>@subTask.Title</span> - <span>@subTask.Description</span> (@subTask.DueDate.ToShortDateString())
+                            <button @onclick="() => DeleteSubTask(task, subTask)">Delete</button>
+                        </li>
+                    }
+                </ul>
+            }
+        </li>
+    }
+</ul>
+
+@code
+{
+    private List<TaskItem> tasks = new();
+    private string newTaskTitle;
+    private string newTaskDescription;
+    private DateTime newTaskDueDate;
+
+    private void AddTask()
+    {
+        if (!string.IsNullOrWhiteSpace(newTaskTitle) && !string.IsNullOrWhiteSpace(newTaskDescription))
+        {
+            tasks.Add(new TaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate });
+            newTaskTitle = "";
+            newTaskDescription = "";
+            newTaskDueDate = DateTime.Today;
+        }
+    }
+
+    private void AddSubTask(TaskItem parentTask)
+    {
+        if (!string.IsNullOrWhiteSpace(newTaskTitle) && !string.IsNullOrWhiteSpace(newTaskDescription))
+        {
+            if (parentTask.SubTasks == null)
+                parentTask.SubTasks = new List<SubTaskItem>();
+
+            parentTask.SubTasks.Add(new SubTaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate });
+            newTaskTitle = "";
+            newTaskDescription = "";
+            newTaskDueDate = DateTime.Today;
+        }
+    }
+
+    private void UpdateTaskStatus(TaskItem task)
+    {
+        task.IsDone = !task.IsDone;
+    }
+
+    private void UpdateSubTaskStatus(TaskItem parentTask, SubTaskItem subTask)
+    {
+        subTask.IsDone = !subTask.IsDone;
+        UpdateParentTaskStatus(parentTask);
+    }
+
+    private void UpdateParentTaskStatus(TaskItem task)
+    {
+        if (task.SubTasks != null && task.SubTasks.Count > 0)
+        {
+            task.IsDone = task.SubTasks.All(subTask => subTask.IsDone);
+        }
+    }
+
+    private void DeleteTask(TaskItem task)
+    {
+        tasks.Remove(task);
+    }
+
+    private void DeleteSubTask(TaskItem parentTask, SubTaskItem subTask)
+    {
+        parentTask.SubTasks.Remove(subTask);
+        UpdateParentTaskStatus(parentTask);
+    }
+
+    private int GetIncompleteTaskCount()
+    {
+        return tasks.Count(task => !task.IsDone);
+    }
+
+    public class TaskItem
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
+        public bool IsDone { get; set; }
+        public List<SubTaskItem> SubTasks { get; set; }
+    }
+
+    public class SubTaskItem
+    {
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public DateTime DueDate { get; set; }
+        public bool IsDone { get; set; }
+    }
+}
