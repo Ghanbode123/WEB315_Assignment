@@ -1,13 +1,24 @@
 @page "/Todo"
 
 <h3>Number of Tasks: @GetIncompleteTaskCount()</h3>
+
+<div class="task-filter">
+    <label>Filter tasks:</label>
+    <select @bind="@selectedFilter">
+        <option value="all">All Tasks</option>
+        <option value="completed">Completed Tasks</option>
+        <option value="incomplete">Incomplete Tasks</option>
+    </select>
+</div>
+
 <input placeholder="Task title" @bind="newTaskTitle" />
 <input placeholder="Task description" @bind="newTaskDescription" />
 <input type="date" @bind="newTaskDueDate" />
 <button @onclick="AddTask">Add Task</button>
 <br>
+
 <ul>
-    @foreach (var task in tasks)
+    @foreach (var task in GetFilteredTasks())
     {
         <li>
             <input type="checkbox" @onclick="(e) => UpdateTaskStatus(task)" @bind="task.IsDone" />
@@ -38,6 +49,7 @@
     private string newTaskTitle;
     private string newTaskDescription;
     private DateTime newTaskDueDate;
+    private string selectedFilter = "all";
 
     private void AddTask()
     {
@@ -97,6 +109,17 @@
     private int GetIncompleteTaskCount()
     {
         return tasks.Count(task => !task.IsDone);
+    }
+
+    private IEnumerable<TaskItem> GetFilteredTasks()
+    {
+        return selectedFilter switch
+        {
+            "all" => tasks,
+            "completed" => tasks.Where(t => t.IsDone),
+            "incomplete" => tasks.Where(t => !t.IsDone),
+            _ => tasks
+        };
     }
 
     public class TaskItem

@@ -91,12 +91,13 @@ using GhanbodeEbieredeFinalProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 36 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
+#line 47 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
  
     private List<TaskItem> tasks = new();
     private string newTaskTitle;
     private string newTaskDescription;
     private DateTime newTaskDueDate;
+    private string selectedFilter = "all";
 
     private void AddTask()
     {
@@ -156,6 +157,17 @@ using GhanbodeEbieredeFinalProject.Shared;
     private int GetIncompleteTaskCount()
     {
         return tasks.Count(task => !task.IsDone);
+    }
+
+    private IEnumerable<TaskItem> GetFilteredTasks()
+    {
+        return selectedFilter switch
+        {
+            "all" => tasks,
+            "completed" => tasks.Where(t => t.IsDone),
+            "incomplete" => tasks.Where(t => !t.IsDone),
+            _ => tasks
+        };
     }
 
     public class TaskItem
