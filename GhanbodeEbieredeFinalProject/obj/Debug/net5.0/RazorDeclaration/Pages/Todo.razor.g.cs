@@ -91,36 +91,78 @@ using GhanbodeEbieredeFinalProject.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 47 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
+#line 42 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
  
     private List<TaskItem> tasks = new();
     private string newTaskTitle;
     private string newTaskDescription;
     private DateTime newTaskDueDate;
-    private string selectedFilter = "all";
+    private string errorMessage;
 
     private void AddTask()
     {
-        if (!string.IsNullOrWhiteSpace(newTaskTitle) && !string.IsNullOrWhiteSpace(newTaskDescription))
+        try
         {
-            tasks.Add(new TaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate });
+            if (string.IsNullOrWhiteSpace(newTaskTitle) || string.IsNullOrWhiteSpace(newTaskDescription))
+            {
+                errorMessage = "Task title and description are required.";
+                return;
+            }
+
+            var newTask = new TaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate };
+
+            // Check if the task already exists with the same title
+            if (tasks.Any(t => t.Title == newTask.Title))
+            {
+                errorMessage = "A task with the same title already exists.";
+                return;
+            }
+
+            tasks.Add(newTask);
             newTaskTitle = "";
             newTaskDescription = "";
             newTaskDueDate = DateTime.Today;
+
+            errorMessage = ""; // Clear any previous error messages on successful task addition
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while adding the task: " + ex.Message;
         }
     }
 
     private void AddSubTask(TaskItem parentTask)
     {
-        if (!string.IsNullOrWhiteSpace(newTaskTitle) && !string.IsNullOrWhiteSpace(newTaskDescription))
+        try
         {
+            if (string.IsNullOrWhiteSpace(newTaskTitle) || string.IsNullOrWhiteSpace(newTaskDescription))
+            {
+                errorMessage = "Task title and description are required.";
+                return;
+            }
+
             if (parentTask.SubTasks == null)
                 parentTask.SubTasks = new List<SubTaskItem>();
 
-            parentTask.SubTasks.Add(new SubTaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate });
+            var newSubTask = new SubTaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate };
+
+            // Check if the subtask already exists with the same title
+            if (parentTask.SubTasks.Any(st => st.Title == newSubTask.Title))
+            {
+                errorMessage = "A subtask with the same title already exists.";
+                return;
+            }
+
+            parentTask.SubTasks.Add(newSubTask);
             newTaskTitle = "";
             newTaskDescription = "";
             newTaskDueDate = DateTime.Today;
+
+            errorMessage = ""; // Clear any previous error messages on successful subtask addition
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while adding the subtask: " + ex.Message;
         }
     }
 
@@ -157,17 +199,6 @@ using GhanbodeEbieredeFinalProject.Shared;
     private int GetIncompleteTaskCount()
     {
         return tasks.Count(task => !task.IsDone);
-    }
-
-    private IEnumerable<TaskItem> GetFilteredTasks()
-    {
-        return selectedFilter switch
-        {
-            "all" => tasks,
-            "completed" => tasks.Where(t => t.IsDone),
-            "incomplete" => tasks.Where(t => !t.IsDone),
-            _ => tasks
-        };
     }
 
     public class TaskItem

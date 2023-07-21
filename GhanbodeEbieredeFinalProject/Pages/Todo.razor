@@ -1,24 +1,19 @@
 @page "/Todo"
 
 <h3>Number of Tasks: @GetIncompleteTaskCount()</h3>
-
-<div class="task-filter">
-    <label>Filter tasks:</label>
-    <select @bind="@selectedFilter">
-        <option value="all">All Tasks</option>
-        <option value="completed">Completed Tasks</option>
-        <option value="incomplete">Incomplete Tasks</option>
-    </select>
-</div>
-
 <input placeholder="Task title" @bind="newTaskTitle" />
 <input placeholder="Task description" @bind="newTaskDescription" />
 <input type="date" @bind="newTaskDueDate" />
 <button @onclick="AddTask">Add Task</button>
 <br>
 
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <p class="error-message">@errorMessage</p>
+}
+
 <ul>
-    @foreach (var task in GetFilteredTasks())
+    @foreach (var task in tasks)
     {
         <li>
             <input type="checkbox" @onclick="(e) => UpdateTaskStatus(task)" @bind="task.IsDone" />
@@ -49,30 +44,72 @@
     private string newTaskTitle;
     private string newTaskDescription;
     private DateTime newTaskDueDate;
-    private string selectedFilter = "all";
+    private string errorMessage;
 
     private void AddTask()
     {
-        if (!string.IsNullOrWhiteSpace(newTaskTitle) && !string.IsNullOrWhiteSpace(newTaskDescription))
+        try
         {
-            tasks.Add(new TaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate });
+            if (string.IsNullOrWhiteSpace(newTaskTitle) || string.IsNullOrWhiteSpace(newTaskDescription))
+            {
+                errorMessage = "Task title and description are required.";
+                return;
+            }
+
+            var newTask = new TaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate };
+
+            // Check if the task already exists with the same title
+            if (tasks.Any(t => t.Title == newTask.Title))
+            {
+                errorMessage = "A task with the same title already exists.";
+                return;
+            }
+
+            tasks.Add(newTask);
             newTaskTitle = "";
             newTaskDescription = "";
             newTaskDueDate = DateTime.Today;
+
+            errorMessage = ""; // Clear any previous error messages on successful task addition
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while adding the task: " + ex.Message;
         }
     }
 
     private void AddSubTask(TaskItem parentTask)
     {
-        if (!string.IsNullOrWhiteSpace(newTaskTitle) && !string.IsNullOrWhiteSpace(newTaskDescription))
+        try
         {
+            if (string.IsNullOrWhiteSpace(newTaskTitle) || string.IsNullOrWhiteSpace(newTaskDescription))
+            {
+                errorMessage = "Task title and description are required.";
+                return;
+            }
+
             if (parentTask.SubTasks == null)
                 parentTask.SubTasks = new List<SubTaskItem>();
 
-            parentTask.SubTasks.Add(new SubTaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate });
+            var newSubTask = new SubTaskItem { Title = newTaskTitle, Description = newTaskDescription, DueDate = newTaskDueDate };
+
+            // Check if the subtask already exists with the same title
+            if (parentTask.SubTasks.Any(st => st.Title == newSubTask.Title))
+            {
+                errorMessage = "A subtask with the same title already exists.";
+                return;
+            }
+
+            parentTask.SubTasks.Add(newSubTask);
             newTaskTitle = "";
             newTaskDescription = "";
             newTaskDueDate = DateTime.Today;
+
+            errorMessage = ""; // Clear any previous error messages on successful subtask addition
+        }
+        catch (Exception ex)
+        {
+            errorMessage = "An error occurred while adding the subtask: " + ex.Message;
         }
     }
 
@@ -109,17 +146,6 @@
     private int GetIncompleteTaskCount()
     {
         return tasks.Count(task => !task.IsDone);
-    }
-
-    private IEnumerable<TaskItem> GetFilteredTasks()
-    {
-        return selectedFilter switch
-        {
-            "all" => tasks,
-            "completed" => tasks.Where(t => t.IsDone),
-            "incomplete" => tasks.Where(t => !t.IsDone),
-            _ => tasks
-        };
     }
 
     public class TaskItem
