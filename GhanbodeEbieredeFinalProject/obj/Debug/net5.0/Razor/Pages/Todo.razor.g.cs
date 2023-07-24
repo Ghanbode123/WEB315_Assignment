@@ -87,15 +87,13 @@ using GhanbodeEbieredeFinalProject.Shared;
         {
             __builder.OpenElement(0, "h3");
             __builder.AddContent(1, "Number of Tasks: ");
-            __builder.AddContent(2, 
 #nullable restore
 #line 3 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                      GetIncompleteTaskCount()
+__builder.AddContent(2, GetIncompleteTaskCount());
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddMarkupContent(3, "\r\n");
             __builder.OpenElement(4, "input");
@@ -166,15 +164,13 @@ using GhanbodeEbieredeFinalProject.Shared;
 #nullable disable
             __builder.OpenElement(23, "p");
             __builder.AddAttribute(24, "class", "error-message");
-            __builder.AddContent(25, 
 #nullable restore
 #line 12 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                              errorMessage
+__builder.AddContent(25, errorMessage);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
 #nullable restore
 #line 13 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
@@ -218,38 +214,32 @@ using GhanbodeEbieredeFinalProject.Shared;
             __builder.CloseElement();
             __builder.AddMarkupContent(33, "\r\n            ");
             __builder.OpenElement(34, "span");
-            __builder.AddContent(35, 
 #nullable restore
 #line 20 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                   task.Title
+__builder.AddContent(35, task.Title);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddContent(36, " - ");
             __builder.OpenElement(37, "span");
-            __builder.AddContent(38, 
 #nullable restore
 #line 20 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                                              task.Description
+__builder.AddContent(38, task.Description);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddContent(39, " (");
-            __builder.AddContent(40, 
 #nullable restore
 #line 20 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                                                                        task.DueDate.ToShortDateString()
+__builder.AddContent(40, task.DueDate.ToShortDateString());
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.AddMarkupContent(41, ")\r\n            ");
             __builder.OpenElement(42, "button");
             __builder.AddAttribute(43, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
@@ -319,38 +309,32 @@ using GhanbodeEbieredeFinalProject.Shared;
             __builder.CloseElement();
             __builder.AddMarkupContent(56, "\r\n                            ");
             __builder.OpenElement(57, "span");
-            __builder.AddContent(58, 
 #nullable restore
 #line 31 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                                   subTask.Title
+__builder.AddContent(58, subTask.Title);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddContent(59, " - ");
             __builder.OpenElement(60, "span");
-            __builder.AddContent(61, 
 #nullable restore
 #line 31 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                                                                 subTask.Description
+__builder.AddContent(61, subTask.Description);
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.CloseElement();
             __builder.AddContent(62, " (");
-            __builder.AddContent(63, 
 #nullable restore
 #line 31 "C:\Users\W0835765\Documents\GitHub\WEB315_Assignment\GhanbodeEbieredeFinalProject\Pages\Todo.razor"
-                                                                                              subTask.DueDate.ToShortDateString()
+__builder.AddContent(63, subTask.DueDate.ToShortDateString());
 
 #line default
 #line hidden
 #nullable disable
-            );
             __builder.AddMarkupContent(64, ")\r\n                            ");
             __builder.OpenElement(65, "button");
             __builder.AddAttribute(66, "onclick", Microsoft.AspNetCore.Components.EventCallback.Factory.Create<Microsoft.AspNetCore.Components.Web.MouseEventArgs>(this, 
